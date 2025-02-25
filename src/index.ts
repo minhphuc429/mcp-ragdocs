@@ -17,7 +17,7 @@ import { EmbeddingService } from './embeddings.js';
 // Environment variables for configuration
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
 // Force using IP address to avoid hostname resolution issues
-const QDRANT_URL = 'http://127.0.0.1:6333';
+const QDRANT_URL = process.env.QDRANT_URL || 'http://127.0.0.1:6333';
 const COLLECTION_NAME = 'documentation';
 const EMBEDDING_PROVIDER = process.env.EMBEDDING_PROVIDER || 'ollama';
 const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL;
